@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.sampled.ReverbType;
-
 public class App {
     public static void main(String[] args) throws Exception {
         // StringBuilder hello = new StringBuilder("Hello");
@@ -31,17 +29,36 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
 
-        reverserInt(x);
+        System.out.println(reverseInt(x));
 
         sc.close();
 
     }
 
-    public int reverseInt(int x) {
+    public static int reverseInt(int x) {
 
+        int rev;
+        //convert x to string
+        String stringX = Integer.toString(x);
+
+        //convert (stringX) to String Builder
+        StringBuilder strNum = new StringBuilder(stringX);
+
+        //reverse (strNum)
+        strNum.reverse();
+
+        //convert String Builder (strNum) to String (strNum2)
+        String strNum2 = strNum.toString();
+
+        //convert String (strNum2) to Integer (rev)
         
-
-        return 0;
+        try {
+            rev = Integer.parseInt(strNum2);
+            return rev;
+        }
+        catch(Exception e) {
+            return 0;
+        }
     }
 
 }
