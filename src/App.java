@@ -21,7 +21,7 @@ public class App {
         hello.insert(6, "world and ");
         System.out.println(hello);
 
-        hello.replace(6, 22, "Giatay!");
+        hello.replace(6, 22, "World!");
         System.out.println(hello);
 
     }
